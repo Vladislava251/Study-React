@@ -6,10 +6,10 @@ function Navbar() {
     return (
         <nav className={s.nav}>
             <div className={s.item}>
-                <NavLink exact to="/profile" activeClassName={s.activeLink}>Profile</NavLink>
+                <NavLink to="/profile" activeClassName={s.activeLink}>Profile</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink exact to="/dialogs" activeClassName={s.activeLink}>Message</NavLink>
+                <NavLink to="/dialogs" activeClassName={s.activeLink}>Message</NavLink>
             </div>
             <div className={s.item}>
                 <NavLink to="#s">News</NavLink>
