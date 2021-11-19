@@ -11,7 +11,7 @@ const DialogItem = (props) => {
 };
 
 const Message = (props) => {
-    <div className={s.message}>{props.message}</div>
+    return <div className={s.message}>{props.message}</div>;
 };
 
 function Dialogs(props) {
@@ -26,14 +26,12 @@ function Dialogs(props) {
                 <DialogItem name="Valera" id="6" />
             </div>
             <div className={s.messages}>
-                <Routes>
-                    <Route path="/dialogs/1" element={<Message message="Hi" />} />
-                    <Route path="/dialogs/2" element={<Message message="How is your IT-Kamasutra?" />} />
-                    <Route path="/dialogs/3" element={<Message message="Yo" />} />
-                    <Route path="/dialogs/4" element={<Message message="Yo" />} />
-                    <Route path="/dialogs/5" element={<Message message="Yo" />} />
-                    <Route path="/dialogs/6" element={<Message message="Yo" />} />
-                </Routes>
+                <Message message="Hi" />
+                <Message message="How is your IT-Kamasutra?" />
+                <Message message="Yo" />
+                <Message message="Yo" />
+                <Message message="Yo" />
+                <Message message="Yo" />
             </div>
         </div>
     );
