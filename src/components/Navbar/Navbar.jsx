@@ -6,20 +6,20 @@ function Navbar() {
     return (
         <nav className={s.nav}>
             <div className={s.item}>
-                <NavLink to="/profile" activeClassName={s.activeLink}>Profile</NavLink>
+                <NavLink to="/profile" className={({ isActive }) => isActive ? s.activeLink : ''}>Profile</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/dialogs" activeClassName={s.activeLink}>Message</NavLink>
+                <NavLink to="/dialogs" className={({ isActive }) => isActive ? s.activeLink : ''}>Message</NavLink>
+            </div>
+            {/* <div className={s.item}>
+                <NavLink to="#s" className={({ isActive }) => isActive ? s.activeLink : ''}>News</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="#s">News</NavLink>
+            <NavLink to="#s" className={({ isActive }) => isActive ? s.activeLink : ''}>Music</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="#s">Music</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink to="#s">Settings</NavLink>
-            </div>
+                <NavLink to="#s" className={({ isActive }) => isActive ? s.activeLink : ''}>Settings</NavLink>
+            </div> */}
         </nav>
     );
 }

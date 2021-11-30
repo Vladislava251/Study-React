@@ -5,10 +5,10 @@
 }
 
 .item a {
-    color: white;
+    color: darkgoldenrod;
     text-decoration: none;
 }
 
 .item a.activeLink {
-    color: red;
+    color: white;
 }

@@ -5,26 +5,33 @@ let initialState = {
     posts: [
         { id: 1, message: "Hi, how are you?", count: 15 },
         { id: 2, message: "It's my first post.", count: 20 },
-      ],
-      newPostText: "it-kamasutra",
+    ],
+    newPostText: "it-kamasutra",
 };
 
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_POST:
-            let newPost = {
-                id: 5,
-                message: state.newPostText,
-                count: 0,
-            };
-            state.posts.push(newPost);
-            state.newPostText = "";
-            break;
+            {
+                let newPost = {
+                    id: 5,
+                    message: state.newPostText,
+                    count: 0,
+                };
+                return {
+                    ...state,
+                    posts: [...state.posts, newPost],
+                    newPostText: ''
+                };
+            }
         case UPDATE_NEW_POST_TEXT:
-            state.newPostText = action.newText;
-            break;
-    };
-    return state;
+            return {
+                ...state,
+                newPostText: action.newText
+            };
+        default:
+            return state;
+    };    
 };
 
 export const addPostActionCreator = () => ({ type: ADD_POST });
